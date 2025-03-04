@@ -1,0 +1,17 @@
+{
+  "name": "pm.booth.kirutoshop",
+  "displayName": "EditorOnly Toggle",
+  "version": "0.0.1",
+  "description": "Hierarchy\u4e0a\u3067Object\u306eON/OFF\u3084EditorOnly\u30bf\u30b0\u3092\u5207\u308a\u66ff\u3048\u308b\u62e1\u5f35\u30a8\u30c7\u30a3\u30bf",
+  "gitDependencies": {},
+  "vpmDependencies": {
+    "com.vrchat.base": "3.7.5"
+  },
+  "author": {
+    "name": "Kiruto",
+    "email": "kirutoshop@booth.pm"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {},
+  "localPath": "G:\\Projects\\VRC\\Tools\\Packages\\pm.booth.kirutoshop"
+}
