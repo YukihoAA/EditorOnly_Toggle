@@ -1,9 +1,9 @@
 {
-  "name": "pm.booth.kirutoshop.Editor",
+  "name": "booth.kirutoshop.editoronly.Editor",
   "references": [
     "VRC.SDKBase",
     "VRC.SDKBase.Editor",
-    "pm.booth.kirutoshop"
+    "booth.kirutoshop.editoronly"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
