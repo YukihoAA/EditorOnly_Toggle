@@ -1,7 +1,7 @@
 {
   "name": "booth.kirutoshop.editoronly",
   "displayName": "EditorOnly Toggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity" : "2022.3",
   "description": "Hierarchy\u4e0a\u3067Object\u306eON/OFF\u3084EditorOnly\u30bf\u30b0\u3092\u5207\u308a\u66ff\u3048\u308b\u62e1\u5f35\u30a8\u30c7\u30a3\u30bf",
   "vrchatVersion" : "2022.3.3",
