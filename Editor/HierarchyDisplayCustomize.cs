@@ -5,7 +5,6 @@ using UnityEditor;
 
 namespace booth.kirutoshop.editoronly.Editor
 {
-
     public class HierarchyDisplayCustomize
     {
         private static bool isCustomizationEnabled = true; // デフォルトで有効
@@ -25,7 +24,6 @@ namespace booth.kirutoshop.editoronly.Editor
             EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;
             EditorApplication.hierarchyChanged += OnHierarchyChanged; // シーンヒエラルキーが変更された際のイベント
             backgroundTexture = GetBackgroundTexture(defBackColor); // 初回生成
-
         }
 
         /// <summary>
@@ -102,13 +100,21 @@ namespace booth.kirutoshop.editoronly.Editor
             Color textColor = isInactive ? new Color(0.75f, 0.75f, 0.75f) : Color.white;
 
             // オブジェクト名の表示位置
-            Rect nameLabelRect = new Rect(selectionRect.x + 18, selectionRect.y, selectionRect.width, selectionRect.height);
+            Rect nameLabelRect = new Rect(
+                selectionRect.x + 18,
+                selectionRect.y,
+                selectionRect.width,
+                selectionRect.height
+            );
 
             // オブジェクト名と背景色を表示
             GUIStyle backgroundStyle = GetBackgroundStyle();
             EditorGUI.LabelField(nameLabelRect, GUIContent.none, backgroundStyle);
-            EditorGUI.LabelField(nameLabelRect, gameObject.name, new GUIStyle { normal = { textColor = textColor } });
-
+            EditorGUI.LabelField(
+                nameLabelRect,
+                gameObject.name,
+                new GUIStyle { normal = { textColor = textColor } }
+            );
         }
 
         /// <summary>
@@ -126,7 +132,12 @@ namespace booth.kirutoshop.editoronly.Editor
         {
             GUIStyle btnStyle = new GUIStyle(GUI.skin.button);
             //ボタン位置を調整場合は、xMaxへのマイナス値を変更する
-            Rect btnRect = new Rect(selectionRect.xMax - 52, selectionRect.y, 28, selectionRect.height);
+            Rect btnRect = new Rect(
+                selectionRect.xMax - 52,
+                selectionRect.y,
+                28,
+                selectionRect.height
+            );
             string newTags;
 
             if (isEditorOnly)
@@ -155,7 +166,12 @@ namespace booth.kirutoshop.editoronly.Editor
         private static void HandleActiveToggle(Rect selectionRect, GameObject gameObject)
         {
             //ボタン位置を調整場合は、xMaxへのマイナス値を変更する
-            Rect toggleRect = new Rect(selectionRect.xMax - 20, selectionRect.y, 20, selectionRect.height);
+            Rect toggleRect = new Rect(
+                selectionRect.xMax - 20,
+                selectionRect.y,
+                20,
+                selectionRect.height
+            );
 
             bool active = GUI.Toggle(toggleRect, gameObject.activeSelf, string.Empty);
             if (active == gameObject.activeSelf)

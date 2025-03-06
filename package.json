@@ -1,21 +1,21 @@
 {
   "name": "booth.kirutoshop.editoronly",
   "displayName": "EditorOnly Toggle",
-  "version": "1.0.1",
-  "unity" : "2022.3",
-  "description": "Hierarchy\u4e0a\u3067Object\u306eON/OFF\u3084EditorOnly\u30bf\u30b0\u3092\u5207\u308a\u66ff\u3048\u308b\u62e1\u5f35\u30a8\u30c7\u30a3\u30bf",
-  "vrchatVersion" : "2022.3.3",
+  "version": "1.0.2",
+  "unity": "2022.3",
+  "description": "Hierarchy上でObjectのON/OFFやEditorOnlyタグを切り替える拡張エディタ",
+  "vrchatVersion": "2022.3.3",
   "author": {
     "name": "Kiruto",
     "email": "kirutoshop@booth.pm",
-    "url" : "https://kiruto-shop.booth.pm/items/5748769"
+    "url": "https://kiruto-shop.booth.pm/items/5748769"
   },
   "siteUrl": "https://github.com/YukihoAA/EditorOnly_Toggle",
   "legacyFolders": {
-      "Assets\\KirutoLab": "1d3a71af381f9ff408d70aec10c68192"
+    "Assets\\KirutoLab": "1d3a71af381f9ff408d70aec10c68192"
   },
   "unityPackageDestinationFolder": "Assets/KirutoLab",
   "unityPackageDestinationFolderMetas": {
-      "Assets/KirutoLab": "1d3a71af381f9ff408d70aec10c68192"
+    "Assets/KirutoLab": "1d3a71af381f9ff408d70aec10c68192"
   }
 }
