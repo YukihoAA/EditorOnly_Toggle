@@ -1,7 +1,7 @@
 {
   "name": "booth.kirutoshop.editoronly",
   "displayName": "EditorOnly Toggle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "2022.3",
   "description": "Hierarchy上でObjectのON/OFFやEditorOnlyタグを切り替える拡張エディタ",
   "vrchatVersion": "2022.3.3",

@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 namespace booth.kirutoshop.editoronly.Editor
 {
@@ -156,7 +157,9 @@ namespace booth.kirutoshop.editoronly.Editor
             if (GUI.Button(btnRect, "EO", btnStyle))
             {
                 // ボタンがクリックされた時の処理
+                Undo.RecordObject(gameObject, isEditorOnly ? "Remove EditorOnly Tag" : "Apply EditorOnly Tag");
                 gameObject.tag = newTags;
+                RecordChangeForSave(gameObject);
             }
         }
 
@@ -180,7 +183,27 @@ namespace booth.kirutoshop.editoronly.Editor
             }
 
             // アクティブトグルが変更された時の処理
+            Undo.RecordObject(gameObject, active ? "Enable GameObject" : "Disable GameObject");
             gameObject.SetActive(active);
+            RecordChangeForSave(gameObject);
+        }
+
+        /// <summary>
+        /// ゲームオブジェクトの変更をプレハブオーバーライドとシーン保存対象に記録します。
+        /// </summary>
+        private static void RecordChangeForSave(GameObject gameObject)
+        {
+            if (PrefabUtility.IsPartOfPrefabInstance(gameObject))
+            {
+                PrefabUtility.RecordPrefabInstancePropertyModifications(gameObject);
+            }
+
+            if (gameObject.scene.IsValid())
+            {
+                EditorSceneManager.MarkSceneDirty(gameObject.scene);
+            }
+
+            EditorApplication.RepaintHierarchyWindow();
         }
 
         /// <summary>
